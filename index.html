@@ -44,6 +44,67 @@
       -o-transition: all 200ms ease;
       transition: all 200ms ease;
     }
+
+    /* Mobile responsive improvements */
+    @media (max-width: 767px) {
+      .logo_text {
+        font-size: 28px;
+      }
+      
+      .hero-area .contents h5 {
+        font-size: 16px;
+      }
+      
+      .hero-area .contents h2 {
+        font-size: 28px;
+        line-height: 1.2;
+      }
+      
+      .hero-area .contents p {
+        font-size: 16px;
+        margin: 15px 0;
+      }
+      
+      .social-icon {
+        margin: 20px 0;
+      }
+      
+      .social-icon li {
+        margin: 0 5px;
+      }
+      
+      .about-profile ul li {
+        display: block;
+        margin-bottom: 10px;
+      }
+      
+      .admin-profile li .pro-title {
+        width: 100px;
+        display: inline-block;
+      }
+      
+      .section-padding {
+        padding: 50px 0;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .logo_text {
+        font-size: 24px;
+      }
+      
+      .hero-area .contents h2 {
+        font-size: 24px;
+      }
+      
+      .navbar-brand {
+        padding: 10px 0;
+      }
+      
+      .portfolio-item {
+        margin-bottom: 30px;
+      }
+    }
   </style>
 
 
@@ -90,11 +151,6 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#portfolios">
-                  Work
-                </a>
-              </li>
-              <li class="nav-item">
                 <a class="nav-link" href="https://bald-end-87b.notion.site/bbf85db435ab41a6967fbb17924f637c?v=b5d23b62346b4c99b9ae6a2e01a30943">
                   Notes
                 </a>
@@ -114,22 +170,16 @@
         <!-- Mobile Menu Start -->
         <ul class="onepage-nev mobile-menu">
           <li>
-            <a href="#home">Home</a>
+            <a href="#hero-area">Home</a>
           </li>
           <li>
-            <a href="#about">about</a>
+            <a href="#about">About</a>
           </li>
           <li>
-            <a href="#services">Services</a>
+            <a href="#resume">Resume</a>
           </li>
           <li>
-            <a href="#resume">resume</a>
-          </li>
-          <li>
-            <a href="#portfolio">Work</a>
-          </li>
-          <li>
-            <a href="#contact">Contact</a>
+            <a href="https://bald-end-87b.notion.site/bbf85db435ab41a6967fbb17924f637c?v=b5d23b62346b4c99b9ae6a2e01a30943">Notes</a>
           </li>
         </ul>
         <!-- Mobile Menu End -->
@@ -178,6 +228,10 @@
             document.getElementById('wechatModal').style.display = 'flex';
           };
           document.getElementById('wechatBtn').onclick = function(e) {
+            e.preventDefault();
+            document.getElementById('wechatModal').style.display = 'flex';
+          };
+          document.getElementById('footerWechatBtn').onclick = function(e) {
             e.preventDefault();
             document.getElementById('wechatModal').style.display = 'flex';
           };
@@ -331,150 +385,7 @@
     </div>
     <!-- Resume Section End -->
 
-    <!-- Portfolio Section -->
-    <section id="portfolios" class="section-padding">
-      <!-- Container Starts -->
-      <div class="container">        
-        <h2 class="section-title wow flipInX" data-wow-delay="0.4s">Projects and Competitions</h2>
-        <div class="row">          
-          <div class="col-md-12">
-            <!-- Portfolio Controller/Buttons -->
-            <div class="controls text-center">
-              <a class="filter active btn btn-common" data-filter="all">
-                All 
-              </a>
-              <a class="filter btn btn-common" data-filter=".Data">
-                Data Science
-              </a>
-              <a class="filter btn btn-common" data-filter=".Coding">
-                Coding
-              </a>
-              <a class="filter btn btn-common" data-filter=".Other">
-                Other
-              </a>
-            </div>
-            <!-- Portfolio Controller/Buttons Ends-->
-          </div>
-
-          <!-- Portfolio Recent Projects -->
-          <div id="portfolio" class="row wow fadeInDown" data-wow-delay="0.4s">
-            <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 mix Other">
-              <div class="portfolio-item">
-                <!--<p align="center">Basketball Champion</p>-->
-                <p align="center">Basketball Champion</p>
-                <div class="shot-item">
-                  <img src="https://tianshufu.site/tony_basketball.JPG" alt="" />
-                  <!--<img src="https://media.giphy.com/media/JVGLHEuzbVviw/giphy.gif" alt="funny GIF" width="100%">-->
-
-                  <div class="overlay">
-                    <div class="icons">
-                      <a class="lightbox preview" href="https://tianshufu.site/tony_basketball.JPG">
-                        <i class="icon-eye"></i>
-                      </a>
-                      <a class="link" href="videos_sport.html">
-                        <i class="icon-link"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>               
-              </div>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 mix Other">
-              <div class="portfolio-item">
-                <p align="center">Speaking Competition</p>
-                <div class="shot-item">
-                  <img src="https://tianshufu.site/tony_speach2tony_speach.jpg" alt=""/>
-                  <div class="overlay">
-                    <div class="icons">
-                      <a class="lightbox preview" href="https://tianshufu.site/tony_speach2tony_speach.jpg">
-                        <i class="icon-eye"></i>
-                      </a>
-                      <a class="link" href="videos_speach.html">
-                        <i class="icon-link"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>               
-              </div>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 mix Coding">
-              <div class="portfolio-item">
-                <p align="center">Online Study Platform</p>
-                <div class="shot-item">
-                  <img src="https://tianshufu.site/tony_loren.jpg" alt=""/>
-                  <div class="overlay">
-                    <div class="icons">
-                      <a class="lightbox preview" href="https://tianshufu.site/tony_loren.jpg">
-                        <i class="icon-eye"></i>
-                      </a>
-                      <a class="link" href="http://loren.world/Englishstudy/">
-                        <i class="icon-link"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>               
-              </div>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 mix Data Coding">
-              <div class="portfolio-item">
-                <p align="center">MCM Top 7%</p>
-                <div class="shot-item">
-                  <img src="https://tianshufu.site/tony_mcm.jpg" alt="" />
-                  <div class="overlay">
-                    <div class="icons">
-                      <a class="lightbox preview" href="https://tianshufu.site/tony_mcm.jpg">
-                        <i class="icon-eye"></i>
-                      </a>
-                      <a class="link" href="https://tianshufu.site/mcm_2019.pdf">
-                        <i class="icon-link"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>               
-              </div>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 mix Data Coding">
-              <div class="portfolio-item">
-                <p align="center">Kaggle Top 2%</p>
-                <div class="shot-item">
-                  <img src="https://tianshufu.site/tony_kaggle.jpg" alt="" />
-                  <div class="overlay">
-                    <div class="icons">
-                      <a class="lightbox preview" href="https://tianshufu.site/tony_kaggle.jpg">
-                        <i class="icon-eye"></i>
-                      </a>
-                      <a class="link" href="https://github.com/tianshufu/Kaggle-Sales-Prediction">
-                        <i class="fa fa-github" aria-hidden="true"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>               
-              </div>
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 mix Data Coding">
-              <div class="portfolio-item">
-                <p align="center">Cancer Detection</p>
-                <div class="shot-item">
-                  <img src="https://tianshufu.site/nuclei_extraction.jpg" alt=""/>
-                  <div class="overlay">
-                    <div class="icons">
-                      <a class="lightbox preview" href="https://tianshufu.site/nuclei_extraction.jpg">
-                        <i class="icon-eye"></i>
-                      </a>
-                      <a class="link" href="#">
-                        <i class="icon-link"></i>
-                      </a>
-                    </div>
-                  </div>
-                </div>               
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Container Ends -->
-    </section>
-    <!-- Portfolio Section Ends --> 
+ 
 
 
 
@@ -486,22 +397,16 @@
             <div class="footer-text text-center wow fadeInDown" data-wow-delay="0.3s">
               <ul class="social-icon">
                 <li>
-                  <a class="facebook" href="#"><i class="icon-social-facebook"></i></a>
+                  <a class="linkedin" href="https://www.linkedin.com/in/tianshu-fu-696a58181" target="_blank" rel="noopener"><i class="icon-social-linkedin"></i></a>
                 </li>
                 <li>
-                  <a class="twitter" href="#"><i class="icon-social-twitter"></i></a>
+                  <a class="github" href="https://github.com/tianshufu" target="_blank" rel="noopener"><i class="fa fa-github"></i></a>
                 </li>
                 <li>
-                  <a class="instagram" href="#"><i class="icon-social-instagram"></i></a>
-                </li>
-                <li>
-                  <a class="instagram" href="#"><i class="icon-social-linkedin"></i></a>
-                </li>
-                <li>
-                  <a class="instagram" href="#"><i class="icon-social-google"></i></a>
+                  <a class="lightbox preview" id="footerWechatBtn" href="javascript:void(0);"><i class="fa fa-weixin"></i></a>
                 </li>
               </ul>
-              <p>Copyright © 2021 TianShu Fu Right Reserved</p>
+              <p>Copyright © 2025 Tianshu Fu. All Rights Reserved</p>
             </div>
           </div>
         </div>
