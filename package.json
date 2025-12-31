@@ -1,0 +1,27 @@
+{
+  "name": "tianshufu-portfolio",
+  "version": "2.0.0",
+  "description": "Tianshu Fu's personal portfolio website",
+  "scripts": {
+    "start": "npx http-server -p 8080 -o",
+    "minify:css": "npx clean-css-cli -o assets/css/main.min.css assets/css/main.css && npx clean-css-cli -o assets/css/responsive.min.css assets/css/responsive.css",
+    "minify:js": "npx terser assets/js/main.js -o assets/js/main.min.js --compress --mangle",
+    "optimize:images": "npx imagemin assets/img/**/*.{jpg,jpeg,png} --out-dir=assets/img",
+    "build": "npm run minify:css && npm run minify:js",
+    "deploy": "npm run build && git add . && git commit -m 'Build and deploy' && git push origin main",
+    "clean": "rm -f assets/css/*.min.css assets/js/*.min.js"
+  },
+  "keywords": [
+    "portfolio",
+    "personal-website",
+    "static-site"
+  ],
+  "author": "Tianshu Fu",
+  "license": "MIT",
+  "devDependencies": {
+    "clean-css-cli": "^5.6.3",
+    "terser": "^5.31.0",
+    "imagemin-cli": "^8.0.0",
+    "http-server": "^14.1.1"
+  }
+}

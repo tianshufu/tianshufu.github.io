@@ -1,18 +1,51 @@
 @import url("https://fonts.googleapis.com/css?family=Shadows+Into+Light|Source+Sans+Pro:400,700");
+
+/* CSS Variables for Color Scheme */
+:root {
+  /* Primary Colors */
+  --color-primary: #2e21df;
+  --color-primary-light: #21cff3;
+  --color-accent: #f55262;
+
+  /* Neutral Colors */
+  --color-white: #fff;
+  --color-black: #000;
+  --color-dark: #040404;
+  --color-dark-gray: #252525;
+  --color-gray: #666;
+  --color-gray-medium: #888;
+  --color-gray-light: #ddd;
+  --color-light: #e6e6e6;
+  --color-bg-light: #f1f1f1;
+  --color-bg-lighter: #f2f2f2;
+  --color-text: #333;
+
+  /* Social Media Colors */
+  --color-facebook: #3b5999;
+  --color-twitter: #4A9CEC;
+  --color-instagram: #D6274D;
+  --color-linkedin: #1260A2;
+  --color-google: #CE332A;
+
+  /* Fonts */
+  --font-primary: "Source Sans Pro", sans-serif;
+  --font-script: 'Shadows Into Light', cursive;
+}
+
 html {
   overflow-x: hidden;
 }
 
 body {
-  background: #fff;
+  background: var(--color-white);
   font-size: 14px;
   font-weight: 400;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: var(--font-primary);
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-font-smoothing: subpixel-antialiased;
-  color: #666;
+  color: var(--color-gray);
   line-height: 25px;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
@@ -22,11 +55,11 @@ body {
 h1, h2, h3, h4 {
   font-size: 38px;
   font-weight: 700;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: var(--font-primary);
 }
 
 .script-font {
-  font-family: 'Shadows Into Light', cursive;
+  font-family: var(--font-script);
 }
 
 a {
@@ -46,7 +79,7 @@ a a:focus {
 
 p {
   font-weight: 400;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: var(--font-primary);
   margin: 0px;
   font-size: 14px;
 }

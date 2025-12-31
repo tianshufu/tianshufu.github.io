@@ -30,18 +30,12 @@
 
   <style type="text/css">
     .logo_text {
-      /*font-family: 'Poppins', serif;*/
-      /*font-family: 'Shadows Into Light', cursive;*/
-      font-family: "Source Sans Pro", sans-serif;
+      font-family: var(--font-primary, "Source Sans Pro", sans-serif);
       font-size: 35px;
       font-weight: 700;
       line-height: 0.75;
-      color: #2e21df;
+      color: var(--color-primary, #2e21df);
       vertical-align: middle;
-      -webkit-transition: all 200ms ease;
-      -moz-transition: all 200ms ease;
-      -ms-transition: all 200ms ease;
-      -o-transition: all 200ms ease;
       transition: all 200ms ease;
     }
 
@@ -218,27 +212,11 @@
             <!-- Modal -->
             <div id="wechatModal" style="display:none; position:fixed; z-index:9999; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.7); align-items:center; justify-content:center;">
           <div style="position:relative; background:#fff; padding:20px; border-radius:8px; max-width:90vw; max-height:90vh; text-align:center;">
-            <img src="assets/img/tianshufu_wechat.jpg" alt="WeChat QR" style="max-width:80vw; max-height:70vh;">
+            <img src="assets/img/tianshufu_wechat.jpg" alt="WeChat QR" style="max-width:80vw; max-height:70vh;" loading="lazy">
             <br>
             <button id="closeWechatModal" class="btn btn-common" style="margin-top:15px;">Close</button>
           </div>
             </div>
-            <script>
-          document.getElementById('contactMeBtn').onclick = function() {
-            document.getElementById('wechatModal').style.display = 'flex';
-          };
-          document.getElementById('wechatBtn').onclick = function(e) {
-            e.preventDefault();
-            document.getElementById('wechatModal').style.display = 'flex';
-          };
-          document.getElementById('closeWechatModal').onclick = function() {
-            document.getElementById('wechatModal').style.display = 'none';
-          };
-          // Optional: close modal when clicking outside the modal content
-          document.getElementById('wechatModal').onclick = function(e) {
-            if (e.target === this) this.style.display = 'none';
-          };
-            </script>
           </div>
         </div>
           </div>
@@ -255,7 +233,7 @@
         <div class="row">
           <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
             <div class="img-thumb wow fadeInLeft" data-wow-delay="0.3s">
-              <img class="img-fluid" src="assets/img/tianshufu_scale_conference.jpg" alt="">
+              <img class="img-fluid" src="assets/img/tianshufu_scale_conference.jpg" alt="Tianshu Fu at Scale Conference" loading="lazy">
             </div>
           </div> 
           <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
@@ -418,7 +396,6 @@
     <script src="assets/js/popper.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <!--<script src="web_page/lingua/styles/bootstrap4/bootstrap.min.js"></script>-->
-    <script src="assets/js/jquery.mixitup.js"></script>
     <script src="assets/js/jquery.counterup.min.js"></script>
     <script src="assets/js/waypoints.min.js"></script>
     <script src="assets/js/wow.js"></script>
