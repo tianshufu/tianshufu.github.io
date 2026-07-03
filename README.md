@@ -116,4 +116,4 @@ MIT License - Feel free to fork and use this template for your own portfolio!
 **Tianshu Fu**
 - LinkedIn: [tianshu-fu](https://www.linkedin.com/in/tianshu-fu-696a58181)
 - GitHub: [tianshufu](https://github.com/tianshufu)
-- Email: tf5202@columbia.edu
+- Email: tf2502@columbia.edu
