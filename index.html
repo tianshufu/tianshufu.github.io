@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <title>Tianshu Fu </title>
+    <meta name="description" content="Tianshu (Tony) Fu — AI-driven Data Engineer at Meta. Production LLM tools, RAG-powered medical AI, and data engineering.">
+    <meta property="og:title" content="Tianshu Fu — AI-driven Data Engineer">
+    <meta property="og:description" content="Personal website and resume of Tianshu (Tony) Fu: LLM-powered product analytics at Meta, RAG voice AI at Knowtex, and data engineering.">
+    <meta property="og:type" content="website">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" >
@@ -37,6 +41,25 @@
       color: var(--color-primary, #2e21df);
       vertical-align: middle;
       transition: all 200ms ease;
+    }
+
+    .skill-block {
+      background: #fff;
+      border: 1px solid #eee;
+      border-radius: 6px;
+      padding: 18px 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+    .skill-title {
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--color-primary, #2e21df);
+    }
+    .skill-text {
+      margin: 0;
+      color: #555;
     }
 
     /* Mobile responsive improvements */
@@ -145,6 +168,11 @@
                 </a>
               </li>
               <li class="nav-item">
+                <a class="nav-link" href="#skills">
+                  Skills
+                </a>
+              </li>
+              <li class="nav-item">
                 <a class="nav-link" href="https://bald-end-87b.notion.site/bbf85db435ab41a6967fbb17924f637c?v=b5d23b62346b4c99b9ae6a2e01a30943">
                   Notes
                 </a>
@@ -173,6 +201,9 @@
             <a href="#resume">Resume</a>
           </li>
           <li>
+            <a href="#skills">Skills</a>
+          </li>
+          <li>
             <a href="https://bald-end-87b.notion.site/bbf85db435ab41a6967fbb17924f637c?v=b5d23b62346b4c99b9ae6a2e01a30943">Notes</a>
           </li>
         </ul>
@@ -189,7 +220,7 @@
           <div class="contents">
             <h5 class="script-font wow fadeInUp" data-wow-delay="0.2s">Hi This is</h5>
             <h2 class="head-title wow fadeInUp" data-wow-delay="0.4s">Tianshu Fu</h2>
-            <p class="script-font wow fadeInUp" data-wow-delay="0.6s">Data Engineer</p>
+            <p class="script-font wow fadeInUp" data-wow-delay="0.6s">AI-driven Engineer</p>
             <ul class="social-icon wow fadeInUp" data-wow-delay="0.8s">
              <li>
             <a class="linkedin" href="https://www.linkedin.com/in/tianshu-fu-696a58181" target="_blank" rel="noopener"><i class="icon-social-linkedin"></i></a>
@@ -240,10 +271,13 @@
             <div class="profile-wrapper wow fadeInRight" data-wow-delay="0.3s">
               <h3>Hi Everyone!</h3>
                 <p>
-                Hi — I’m Tianshu (Tony) Fu, a <strong>Data Engineer</strong> at Meta.<br>
-                I build data pipelines and reporting systems for Ray-Ban Meta smart glasses sales and customer feedback.<br><br>
-                I develop multi-source data infrastructure, searchable databases, and dashboards that help sales and product teams track performance, identify common concerns, and make business decisions.<br><br>
-                Previously, I was the founding engineer at Knowtex, where I built software that turns recorded doctor-patient conversations into structured medical notes and lets physicians review them on mobile devices.
+                Hi — I’m Tianshu (Tony) Fu, an <strong>AI-driven Data Engineer</strong> at Meta.<br>
+                I design and deploy production-scale LLM tools, including:<br><br>
+                <strong>Product Social Listening</strong> – a ChatGPT-style system that transforms millions of user comments into real-time product insights for Meta Quest and Ray-Ban. 
+                <a href="https://medium.com/@AnalyticsAtMeta/harnessing-the-power-of-customer-feedback-unleashing-metas-llama-4-llms-in-product-analytics-2d3a9cfd5805" target="_blank" rel="noopener">[Blog]</a><br>
+                <strong>LLM Taxonomy Assistant</strong> – automatically labels datasets and identifies coverage gaps, accelerating ML prompt experiments by weeks.<br><br>
+                Previously, I was the founding engineer at <a href="https://www.knowtex.ai/" target="_blank" rel="noopener">Knowtex</a>, where I built the first version of a RAG-powered voice AI platform that converts doctor-patient conversations into structured SOAP notes, helping reduce clinician burnout. 
+                <a href="https://apps.apple.com/us/app/knowtex/id6446131804?platform=iphone" target="_blank" rel="noopener">[App]</a>
                 </p>
               <div class="about-profile">
                 <ul class="admin-profile">
@@ -278,21 +312,21 @@
                   <div class="content-text">
                     <h3 class="line-title">Master of Statistics - Columbia University</h3>
                     <span>Sep 2021 - Dec 2022</span>
-                    <p class="line-text">Graduate study in statistics and quantitative analysis.</p>
+                    <p class="line-text">Graduate study in statistics and quantitative analysis. GPA: 3.76.</p>
                   </div>
                 </li>
                 <li>
                   <div class="content-text">
                     <h3 class="line-title">Exchange Student in Data Science - UC Berkeley</h3>
                     <span>Aug 2018 - Dec 2018</span>
-                    <p class="line-text">Coursework: CS100 and Stat 140.</p>
+                    <p class="line-text">Coursework: CS100 and Stat 140. GPA: 3.5.</p>
                   </div>
                 </li>
                 <li>
                   <div class="content-text">
                     <h3 class="line-title">Bachelor of Computer Science - Central China Normal University</h3>
                     <span>Sep 2016 - Jun 2020</span>
-                    <p class="line-text">Coursework: Data Structures, Algorithms, and Databases.</p>
+                    <p class="line-text">Coursework: Data Structures, Algorithms, and Databases. GPA: 86.7/100.</p>
                   </div>
                 </li>
               </ul>
@@ -320,6 +354,12 @@
             discontinued service, restoring full coverage while reducing annual
             costs from approximately $200,000 to under $4,000.
           </p>
+          <p class="line-text">
+            Lead engineer for two LLM-powered products: a real-time
+            <em>Product Social Listening</em> platform and an
+            <em>LLM Taxonomy Assistant</em> that together surface actionable
+            insights for Reality Labs teams.
+          </p>
         </div>
       </li>
 
@@ -329,9 +369,12 @@
           <h3 class="line-title">Founding Software Engineer – Knowtex (YC S22)</h3>
           <span>Jan&nbsp;2023&nbsp;–&nbsp;Nov&nbsp;2023 · San Francisco, CA</span>
           <p class="line-text">
-            Built software that turns recorded doctor-patient conversations
-            into structured medical notes. Developed backend services, an
-            iPhone and Android application, and secure transcript storage.
+            Built a RAG-powered voice-AI platform that translates doctor–patient
+            conversations into personalized SOAP notes, cutting documentation
+            time by 70% and boosting note quality by 20%. Fine-tuned an
+            open-source LLM on production medical transcription data, and
+            developed backend services plus a React Native iPhone/Android app
+            with secure transcript storage.
           </p>
         </div>
       </li>
@@ -357,9 +400,43 @@
     </div>
     <!-- Resume Section End -->
 
- 
-
-
+    <!-- Skills Section Start -->
+    <div id="skills" class="section-padding">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2 class="section-title wow fadeInDown" data-wow-delay="0.3s" style="text-align:center; margin-bottom:30px;">Skills</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-12">
+            <div class="skill-block wow fadeInUp" data-wow-delay="0.3s">
+              <h4 class="skill-title">Languages</h4>
+              <p class="skill-text">Python, Hack, SQL, Go, Java, JavaScript</p>
+            </div>
+            <div class="skill-block wow fadeInUp" data-wow-delay="0.4s">
+              <h4 class="skill-title">AI / ML</h4>
+              <p class="skill-text">PyTorch, TensorFlow, RAG, LLaMA, HuggingFace Transformers, LangChain</p>
+            </div>
+            <div class="skill-block wow fadeInUp" data-wow-delay="0.5s">
+              <h4 class="skill-title">Data Engineering</h4>
+              <p class="skill-text">Dataswarm, Presto, Spark, Hive, AWS, Docker, Kubernetes</p>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-12">
+            <div class="skill-block wow fadeInUp" data-wow-delay="0.3s">
+              <h4 class="skill-title">Databases</h4>
+              <p class="skill-text">PostgreSQL, Tao, MySQL, DynamoDB, MongoDB, Elasticsearch, Neo4j</p>
+            </div>
+            <div class="skill-block wow fadeInUp" data-wow-delay="0.4s">
+              <h4 class="skill-title">Web &amp; Visualization</h4>
+              <p class="skill-text">React, React Native, Streamlit</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Skills Section End -->
 
     <!-- Footer Section Start -->
     <footer class="footer-area section-padding">
@@ -375,7 +452,7 @@
                   <a class="github" href="https://github.com/tianshufu" target="_blank" rel="noopener"><i class="fa fa-github"></i></a>
                 </li>
               </ul>
-              <p>Copyright © 2025 Tianshu Fu. All Rights Reserved</p>
+              <p>Copyright © 2026 Tianshu Fu. All Rights Reserved</p>
             </div>
           </div>
         </div>
