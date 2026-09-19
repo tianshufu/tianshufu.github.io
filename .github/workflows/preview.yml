@@ -8,6 +8,7 @@ name: Staging preview
 on:
   push:
     branches: [staging]
+  workflow_dispatch:
 
 permissions:
   contents: write
