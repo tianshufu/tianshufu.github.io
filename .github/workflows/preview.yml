@@ -1,0 +1,59 @@
+name: Staging preview
+
+# Whenever the `staging` branch is pushed, mirror its site files into
+# `preview/` on master so the work-in-progress can be click-tested at
+# https://tianshufu.com/preview/ without touching the live homepage.
+# Merge staging -> master when the preview is approved.
+
+on:
+  push:
+    branches: [staging]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: staging-preview
+  cancel-in-progress: false
+
+jobs:
+  build-preview:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out staging
+        uses: actions/checkout@v4
+        with:
+          ref: staging
+          path: staging-site
+
+      - name: Check out master
+        uses: actions/checkout@v4
+        with:
+          ref: master
+          path: live-site
+
+      - name: Sync staging files into live preview/
+        run: |
+          rm -rf live-site/preview
+          mkdir -p live-site/preview
+          cd staging-site
+          git ls-files -z | while IFS= read -r -d '' f; do
+            case "$f" in
+              preview/*|.github/*) continue ;;
+            esac
+            mkdir -p "../live-site/preview/$(dirname "$f")"
+            cp -- "$f" "../live-site/preview/$f"
+          done
+
+      - name: Commit preview update to master
+        run: |
+          cd live-site
+          git config user.name "atlas-staging-bot"
+          git config user.email "atlas-staging-bot@users.noreply.github.com"
+          git add preview
+          if git diff --cached --quiet; then
+            echo "preview already up to date"
+          else
+            git commit -m "Refresh staging preview from staging branch"
+            git push origin master
+          fi
