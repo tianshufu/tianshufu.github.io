@@ -135,6 +135,13 @@
       });
     }
 
+    // Close WeChat modal with the ESC key (accessibility)
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && wechatModal && wechatModal.style.display !== 'none') {
+        wechatModal.style.display = 'none';
+      }
+    });
+
   });
 
 }(jQuery));
